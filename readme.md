@@ -1,19 +1,19 @@
 Make sure you have these three things installed:
-Java 17 — specifically Eclipse Temurin 17 (or any Java 17 build). You can check what you have by opening a terminal/PowerShell and typing:
+Java 17, (or any Java 17 build). You can check what you have by opening a terminal/PowerShell and typing:
 
 java -version
 
 It should say something like `17.0.16`.
-PostgreSQL — a database server running on your machine, with a tool like pgAdmin to manage it.
-An IDE — IntelliJ IDEA is recommended, but any Java IDE works.
+PostgreSQL, a database server running on your machine, with a tool like pgAdmin to manage it.
+An IDE IntelliJ IDEA is recommended, but any Java IDE works.
 
 **Step 1: Create the database**
 Open pgAdmin and make sure you're connected to your local Postgres server.
-Right-click Databases → Create → Database.
-Name it `meta` (this matches the name the app expects — see Step 2).
+Rightclick Databases then Create then Database.
+Name it `meta` (this matches the name the app expects see Step 2).
 Click Save.
 
-To double check it worked, right-click the new `meta` database → Query Tool, and run:
+To double check it worked, rightclick the new `meta` database → Query Tool, and run:
 sql
 SELECT current_database();
 
@@ -62,7 +62,7 @@ or set an environment variable named `PGPASSWORD` before running the app, which 
 
 **Step 3: Run the app for the first time**
 
-The database itself is empty right now — no tables exist yet. The app creates them automatically on startup, using a tool called Flyway.
+The database itself is empty right now, no tables exist yet. The app creates them automatically on startup, using a tool called Flyway.
 Open the project in your IDE.
 Find the main class: `ArtistMetaApplication.java`.
 Click the green Run button next to it (or right-click → Run).
@@ -75,7 +75,7 @@ Near the end, you'll see a line like:
   Started ArtistMetaApplication in X seconds
  
 This means the app is up and running.
-To double-check the tables were created: go back to pgAdmin, expand `meta` → Schemas → public → Tables. You should see the tables listed there.
+To double-check the tables were created: go back to pgAdmin, expand `meta` then Schemas then public then Tables. You should see the tables listed there.
  
 **Step 4: Confirm the app is working**
 Once it's running, the app listens on:
